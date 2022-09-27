@@ -1,0 +1,20 @@
+[
+    {
+        "Key": "hello",
+        "LocalizedValue": {
+            "en-US": "Hello- en-US",
+            "en": "Hello - en",
+            "de-DE": "Hallo - de-DE",
+            "de": "Hallo - de"
+        }
+    },
+    {
+        "Key": "hellouser",
+        "LocalizedValue": {
+            "en-US": "Hello {0} - en-US",
+            "en": "Hello {0} - en",
+            "de-DE": "Hallo {0} - de-DE",
+            "de": "Hallo {0} - de"
+        }
+    }
+]

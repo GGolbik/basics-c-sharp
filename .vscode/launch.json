@@ -4,12 +4,12 @@
       // Use IntelliSense to find out which attributes exist for C# debugging
       // Use hover for the description of the existing attributes
       // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-      "name": ".NET Core Launch (console)",
+      "name": "Example-1",
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build-example-1",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/example-1/build/bin/example-1/Debug/net6.0/example-1.dll",
+      "program": "${workspaceFolder}/example-1/build/example-1/bin/Debug/net6.0/example-1.dll",
       "args": [],
       "cwd": "${workspaceFolder}/example-1/src",
       // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
@@ -23,12 +23,12 @@
       // Use IntelliSense to find out which attributes exist for C# debugging
       // Use hover for the description of the existing attributes
       // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-      "name": ".NET Core Launch (console)",
+      "name": "Example-2",
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build-example-2",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/example-2/build/bin/example-2/Debug/net6.0/example-2.dll",
+      "program": "${workspaceFolder}/example-2/build/example-2/bin/Debug/net6.0/example-2.dll",
       "args": [],
       "cwd": "${workspaceFolder}/example-2/src",
       // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
@@ -37,6 +37,30 @@
       "logging": {
         "moduleLoad": false
       },
+    },
+    {
+      "name": "Example 4",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-example-4",
+      "program": "${workspaceFolder}/example-4/build/example-4/bin/Debug/net6.0/example-4.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/example-4/src",
+      "stopAtEntry": false,
+      "logging": {
+        "moduleLoad": false
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s/api/doc"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
     },
     {
       "name": ".NET Core Attach",

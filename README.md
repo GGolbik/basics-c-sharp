@@ -1,9 +1,13 @@
 # Basics C Sharp
 
 - [Example 1](example-1)
-  - A simple dotnet console application based on .NET 6
+  - A .Net 6 console application.
 - [Example 2](example-2)
-  - A simple dotnet console application based on .NET 6 with unit tests and code coverage.
+  - A .Net 6 console application with unit tests and code coverage.
+- Example 3 (Not implemented)
+  - A .NET 6 library as NuGet package.
+- [Example 4](example-4)
+  - An ASP.NET 6 Web-API with versionized API, OpenAPI Swagger documentation and localization.
 - [Snippets](snippets)
   - [Download a file](snippets/download)
 

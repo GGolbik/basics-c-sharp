@@ -1,7 +1,7 @@
 <Project>
   <PropertyGroup>
-    <MSBUildProjectExtensionsPath>$(MSBuildProjectDirectory)\..\build\obj\$(MSBuildProjectName)</MSBUildProjectExtensionsPath>
-    <BaseOutputPath>$(MSBuildProjectDirectory)\..\build\bin\$(MSBuildProjectName)</BaseOutputPath>
-    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)\..\build\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
+    <MSBUildProjectExtensionsPath>$(MSBuildProjectDirectory)\..\build\$(MSBuildProjectName)\obj\</MSBUildProjectExtensionsPath>
+    <BaseOutputPath>$(MSBuildProjectDirectory)\..\build\$(MSBuildProjectName)\bin\</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)\..\build\$(MSBuildProjectName)\obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
 </Project>

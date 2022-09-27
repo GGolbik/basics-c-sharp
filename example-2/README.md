@@ -1,4 +1,15 @@
-# C# - Example 2
+# Example 2 - Console application with unit tests and code coverage
+
+# Table of Contents
+
+* [Create](#create)
+* [Project Settings](#project-settings)
+* [AssemblyInfo](#assemblyinfo)
+* [XUnit](#xunit)
+* [Build](#build)
+* [Tests](#tests)
+  * [Test Result](#test-result)
+  * [Test Coverage](#test-coverage)
 
 # Create
 
@@ -8,8 +19,7 @@ dotnet new console --framework net6.0 --name example-2 --output ./src
 ~~~
 
 Update `*.csproj` to
-~~~
-
+~~~xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -24,12 +34,12 @@ Update `*.csproj` to
 # Project Settings
 
 Setting the [`MSBUildProjectExtensionsPath`](https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets), `BaseOutputPath` (`bin`) and `BaseIntermediateOutputPath` (`obj`) properties in the [`Directory.Build.Props`](https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2019) file, which is located in the root directory of your solution.
-~~~
+~~~xml
 <Project>
   <PropertyGroup>
-    <MSBUildProjectExtensionsPath>$(MSBuildProjectDirectory)\..\build\obj\$(MSBuildProjectName)</MSBUildProjectExtensionsPath>
-    <BaseOutputPath>$(MSBuildProjectDirectory)\..\build\bin\$(MSBuildProjectName)</BaseOutputPath>
-    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)\..\build\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
+    <MSBUildProjectExtensionsPath>$(MSBuildProjectDirectory)\..\build\$(MSBuildProjectName)\obj\</MSBUildProjectExtensionsPath>
+    <BaseOutputPath>$(MSBuildProjectDirectory)\..\build\$(MSBuildProjectName)\bin\</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)\..\build\$(MSBuildProjectName)\obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
 </Project>
 ~~~
@@ -37,7 +47,7 @@ Setting the [`MSBUildProjectExtensionsPath`](https://docs.microsoft.com/en-us/nu
 # AssemblyInfo
 
 Either define your values in the `*.csproj` file (see [properties](https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets))
-~~~
+~~~xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -52,7 +62,7 @@ Either define your values in the `*.csproj` file (see [properties](https://docs.
 ~~~
 
 or create an `AssemblyInfo.cs` with the below content.
-~~~
+~~~C#
 using System.Reflection;
 
 [assembly: AssemblyVersion("1.0.0.*")]
@@ -60,7 +70,7 @@ using System.Reflection;
 ~~~
 
 The `AssemblyInfo.cs` solution requires that `GenerateAssemblyInfo` is `false` in the `*.csproj` file
-~~~
+~~~xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -69,7 +79,7 @@ The `AssemblyInfo.cs` solution requires that `GenerateAssemblyInfo` is `false` i
 ~~~
 
 If you like to use a wildcard in your version number you must add the `Deterministic` entry or you will get the error: `Wildcards are only allowed if the build is not deterministic, which is the default for .Net Core projects. Adding False to csproj fixes the issue.`
-~~~
+~~~xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Deterministic>false</Deterministic>
@@ -78,7 +88,7 @@ If you like to use a wildcard in your version number you must add the `Determini
 ~~~
 
 The values are accessible with
-~~~
+~~~C#
 // AssemblyVersion
 Console.WriteLine($"Version: {System.Reflection.Assembly.GetEntryAssembly()?.GetName().Version}");
 // AssemblyFileVersion
@@ -115,6 +125,24 @@ The test result can be found in `build/test/result.html`. The coverage report ca
 
 # Build
 
-You can build the project with the `build.sh` or with the `docker.sh` script. 
+You can build the project with the `build.sh` or with the `build-docker.sh` script. 
 
-The scripts will execute the tests as well. The test output is available in the `build/test` directory.
+# Tests
+
+You can execute the test by running the `test.sh` script.
+The build scripts will execute the tests as well. The test output is available in the `build/test` directory.
+
+The test can also be executed in VSCode with the [.NET Core Test Explorer](https://marketplace.visualstudio.com/items?itemName=formulahendry.dotnet-test-explorer) extension.
+
+## Test Result
+
+The test result can be found in `build/test/result.html`. 
+
+
+![](images/testresult.png)
+
+## Test Coverage
+
+The coverage report can be found in `build/test/coverage/index.htm`.
+
+![](images/coverage.png)
