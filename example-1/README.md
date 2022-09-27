@@ -1,4 +1,11 @@
-# C# - Example 1
+# Example 1 - Console application
+
+# Table of Contents
+
+* [Create](#create)
+* [Project Settings](#project-settings)
+* [AssemblyInfo](#assemblyinfo)
+* [Build](#build)
 
 # Create
 
@@ -8,8 +15,7 @@ dotnet new console --framework net6.0 --name example-1 --output ./src
 ~~~
 
 Update `*.csproj` to
-~~~
-
+~~~xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -24,12 +30,12 @@ Update `*.csproj` to
 # Project Settings
 
 Setting the [`MSBUildProjectExtensionsPath`](https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets), `BaseOutputPath` (`bin`) and `BaseIntermediateOutputPath` (`obj`) properties in the [`Directory.Build.Props`](https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2019) file, which is located in the root directory of your solution.
-~~~
+~~~xml
 <Project>
   <PropertyGroup>
-    <MSBUildProjectExtensionsPath>$(MSBuildProjectDirectory)\..\build\obj\$(MSBuildProjectName)</MSBUildProjectExtensionsPath>
-    <BaseOutputPath>$(MSBuildProjectDirectory)\..\build\bin\$(MSBuildProjectName)</BaseOutputPath>
-    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)\..\build\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
+    <MSBUildProjectExtensionsPath>$(MSBuildProjectDirectory)\..\build\$(MSBuildProjectName)\obj\</MSBUildProjectExtensionsPath>
+    <BaseOutputPath>$(MSBuildProjectDirectory)\..\build\$(MSBuildProjectName)\bin\</BaseOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)\..\build\$(MSBuildProjectName)\obj\</BaseIntermediateOutputPath>
   </PropertyGroup>
 </Project>
 ~~~
@@ -37,7 +43,7 @@ Setting the [`MSBUildProjectExtensionsPath`](https://docs.microsoft.com/en-us/nu
 # AssemblyInfo
 
 Either define your values in the `*.csproj` file (see [properties](https://docs.microsoft.com/en-us/nuget/reference/msbuild-targets))
-~~~
+~~~xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
@@ -52,7 +58,7 @@ Either define your values in the `*.csproj` file (see [properties](https://docs.
 ~~~
 
 or create an `AssemblyInfo.cs` with the below content.
-~~~
+~~~C#
 using System.Reflection;
 
 [assembly: AssemblyVersion("1.0.0.*")]
@@ -60,7 +66,7 @@ using System.Reflection;
 ~~~
 
 The `AssemblyInfo.cs` solution requires that `GenerateAssemblyInfo` is `false` in the `*.csproj` file
-~~~
+~~~xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -69,7 +75,7 @@ The `AssemblyInfo.cs` solution requires that `GenerateAssemblyInfo` is `false` i
 ~~~
 
 If you like to use a wildcard in your version number you must add the `Deterministic` entry or you will get the error: `Wildcards are only allowed if the build is not deterministic, which is the default for .Net Core projects. Adding False to csproj fixes the issue.`
-~~~
+~~~xml
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Deterministic>false</Deterministic>
@@ -78,7 +84,7 @@ If you like to use a wildcard in your version number you must add the `Determini
 ~~~
 
 The values are accessible with
-~~~
+~~~C#
 // AssemblyVersion
 Console.WriteLine($"Version: {System.Reflection.Assembly.GetEntryAssembly()?.GetName().Version}");
 // AssemblyFileVersion
@@ -89,4 +95,4 @@ Console.WriteLine($"InformationalVersion: {System.Reflection.Assembly.GetEntryAs
 
 # Build
 
-You can build the project with the `build.sh` or with the `docker.sh` script.
+You can build the project with the `build.sh` or with the `build-docker.sh` script.
