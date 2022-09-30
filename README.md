@@ -4,7 +4,7 @@
   - A .Net 6 console application.
 - [Example 2](example-2)
   - A .Net 6 console application with unit tests and code coverage.
-- Example 3 (Not implemented)
+- [Example 3](example-3)
   - A .NET 6 library as NuGet package.
 - [Example 4](example-4)
   - An ASP.NET 6 Web-API with versionized API, OpenAPI Swagger documentation and localization.
