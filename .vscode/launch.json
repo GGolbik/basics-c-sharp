@@ -4,7 +4,7 @@
       // Use IntelliSense to find out which attributes exist for C# debugging
       // Use hover for the description of the existing attributes
       // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-      "name": "Example-1",
+      "name": "Example 1 Debug",
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build-example-1",
@@ -23,7 +23,7 @@
       // Use IntelliSense to find out which attributes exist for C# debugging
       // Use hover for the description of the existing attributes
       // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-      "name": "Example-2",
+      "name": "Example 2 Debug",
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build-example-2",
@@ -39,7 +39,7 @@
       },
     },
     {
-      "name": "Example 4",
+      "name": "Example 4 Debug",
       "type": "coreclr",
       "request": "launch",
       "preLaunchTask": "build-example-4",
@@ -53,7 +53,78 @@
       "serverReadyAction": {
         "action": "openExternally",
         "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
-        "uriFormat": "%s/api/doc"
+        "uriFormat": "%s/swagger"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    },
+    {
+      "name": "Example 5 Debug",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-example-5",
+      "program": "${workspaceFolder}/example-5/build/example-5/bin/Debug/net6.0/example-5.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/example-5/src",
+      "stopAtEntry": false,
+      "logging": {
+        "moduleLoad": false
+      },
+      "serverReadyAction": {
+        "action": "debugWithChrome",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "webRoot": "${workspaceFolder}/src/ClientApp",
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    },
+    {
+      "name": "Example 6 Debug",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-example-6",
+      "program": "${workspaceFolder}/example-6/build/example-6/bin/Debug/net6.0/example-6.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/example-6/src",
+      "stopAtEntry": false,
+      "logging": {
+        "moduleLoad": false
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s/swagger"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    },
+    {
+      "name": "Example 7 Debug",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-example-7",
+      "program": "${workspaceFolder}/example-7/build/example-7/bin/Debug/net6.0/example-7.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/example-7/src",
+      "stopAtEntry": false,
+      "logging": {
+        "moduleLoad": false
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
       },
       "env": {
         "ASPNETCORE_ENVIRONMENT": "Development"
