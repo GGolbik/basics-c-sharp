@@ -1,5 +1,7 @@
-class Downloader {
-
+namespace ggolbik.csharp
+{
+    public class Downloader
+    {
         /// <summary>
         /// Downloads a file from the given source address and saves the file at dest
         /// </summary>
@@ -14,7 +16,7 @@ class Downloader {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(src);
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
             long range = 0;
-            if(retry >= 0 && File.Exists(dest.FullName))
+            if (retry >= 0 && File.Exists(dest.FullName))
             {
                 dest = new FileInfo(dest.FullName);
                 range = dest.Length;
@@ -69,9 +71,9 @@ class Downloader {
                                         throw new Exception("Failed to download complete file. " + src.ToString());
                                     }
                                 }
-                                catch(Exception e)
+                                catch (Exception e)
                                 {
-                                    if(retry != 0 && fileStream.Length < webResponse.ContentLength)
+                                    if (retry != 0 && fileStream.Length < webResponse.ContentLength)
                                     {
                                         fileStream.Close();
                                         fileStream.Dispose();

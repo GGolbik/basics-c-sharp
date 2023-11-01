@@ -9,6 +9,7 @@
 * [Use in Project](#use-in-project)
 * [Build](#build)
   * [Build NuGet](#build-nuget)
+  * [Load NuGet Package](#local-package-directory)
   * [Publish NuGet Package](#publish-nuget-package)
     * [Local Package Directory](#local-package-directory)
   * [NuGet Server](#nuget-server)
@@ -99,8 +100,8 @@ Console.WriteLine($"FileVersion: {System.Reflection.Assembly.GetEntryAssembly()?
 // AssemblyInformationalVersion
 Console.WriteLine($"InformationalVersion: {System.Reflection.Assembly.GetEntryAssembly()?.GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion}");
 ~~~
-## NuGet
 
+## NuGet
 
 Every NuGet package has a manifest that describes the package's contents and dependencies. In the final NuGet package, the manifest is a `.nuspec` file, which uses the NuGet [metadata properties](https://learn.microsoft.com/en-us/nuget/reference/msbuild-targets#pack-target) you include in the project file.
 
@@ -154,6 +155,21 @@ To automatically run dotnet pack whenever you run dotnet build, add the followin
 
 ~~~xml
 <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+~~~
+
+## Load NuGet Package
+
+We need to go into the target projects `.csproj` file. We want to test out our NuGet package on our console app called app so we open up app.csproj and under `PropertyGroup` we add a tag called `RestoreSources`. Here we point out both the path to our local NuGet package and the NuGet stream. It should look like so:
+~~~xml
+<RestoreSources>$(RestoreSources);absolute-path-to-my-solution/library/bin/Debug;https://api.nuget.org/v3/index.json</RestoreSources>
+~~~
+
+You need to replace absolute-path-to-my-solution/library/bin/Debug above with the absolute path to where your package is located.
+
+Now that we pointed out where NuGet can find our package we are ready to install it.
+
+~~~
+dotnet add app package GGolbik.CSharp.Example_3
 ~~~
 
 ## Publish NuGet Package
