@@ -14,8 +14,11 @@
   - An ASP.NET 6 Web-API with localization.
 - [Example 7](example-7)
   - An ASP.NET 6 Web-API with versionized API and extended Swagger documentation. It provides an example of an exception during a request.
+- [Example 8](example-8)
+  - Example to read `/etc/passwd` file
 - [Snippets](snippets)
   - [Download a file](snippets/download)
+  - [Unix-Crypt Implementation](snippets/unix-crypt)
 
 # .NET
 
