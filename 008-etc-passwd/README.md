@@ -1,4 +1,4 @@
-# Example 8 - Example to read `/etc/passwd` file
+# 008-etc-passwd - Example to read `/etc/passwd` file
 
 # Table of Contents
 
@@ -10,7 +10,7 @@
 
 Create a new console application project:
 ~~~
-dotnet new console --framework net6.0 --name example-8 --output ./src
+dotnet new console --framework net6.0 --name 008-etc-passwd --output ./src
 ~~~
 
 Update `*.csproj` to

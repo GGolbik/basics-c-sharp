@@ -1,4 +1,4 @@
-# Example 6 - ASP .NET Web-API - i18n
+# 006-web-api-i18n - ASP .NET Web-API - i18n
 
 [ASP.NET Core localization with json files](https://stackoverflow.com/a/44782669)
 
@@ -17,7 +17,7 @@
 
 Create a new console application project:
 ~~~
-dotnet new webapi --no-https --framework net6.0 --name example-6 --output ./src
+dotnet new webapi --no-https --framework net6.0 --name 006-web-api-i18n --output ./src
 ~~~
 
 # Add required packages

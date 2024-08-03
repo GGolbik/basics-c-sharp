@@ -1,4 +1,4 @@
-# Example 1 - Console application
+# 001-console-app - Console application
 
 # Table of Contents
 
@@ -11,7 +11,7 @@
 
 Create a new console application project:
 ~~~
-dotnet new console --framework net6.0 --name example-1 --output ./src
+dotnet new console --framework net6.0 --name 001-console-app --output ./src
 ~~~
 
 Update `*.csproj` to

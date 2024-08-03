@@ -4,14 +4,14 @@
       // Use IntelliSense to find out which attributes exist for C# debugging
       // Use hover for the description of the existing attributes
       // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-      "name": "Example 1 Debug",
+      "name": "001-console-app Debug",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build-example-1",
+      "preLaunchTask": "build-001-console-app",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/example-1/build/example-1/bin/Debug/net6.0/example-1.dll",
+      "program": "${workspaceFolder}/001-console-app/build/001-console-app/bin/Debug/netstandard2.1/001-console-app.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/example-1/src",
+      "cwd": "${workspaceFolder}/001-console-app/src",
       // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
       "console": "internalConsole",
       "stopAtEntry": false,
@@ -23,14 +23,14 @@
       // Use IntelliSense to find out which attributes exist for C# debugging
       // Use hover for the description of the existing attributes
       // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
-      "name": "Example 2 Debug",
+      "name": "002-tests-and-code-coverage Debug",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build-example-2",
+      "preLaunchTask": "build-002-tests-and-code-coverage",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/example-2/build/example-2/bin/Debug/net6.0/example-2.dll",
+      "program": "${workspaceFolder}/002-tests-and-code-coverage/build/002-tests-and-code-coverage/bin/Debug/net6.0/002-tests-and-code-coverage.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/example-2/src",
+      "cwd": "${workspaceFolder}/002-tests-and-code-coverage/src",
       // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
       "console": "internalConsole",
       "stopAtEntry": false,
@@ -39,13 +39,13 @@
       },
     },
     {
-      "name": "Example 4 Debug",
+      "name": "004-web-api-swagger Debug",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build-example-4",
-      "program": "${workspaceFolder}/example-4/build/example-4/bin/Debug/net6.0/example-4.dll",
+      "preLaunchTask": "build-004-web-api-swagger",
+      "program": "${workspaceFolder}/004-web-api-swagger/build/004-web-api-swagger/bin/Debug/net6.0/004-web-api-swagger.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/example-4/src",
+      "cwd": "${workspaceFolder}/004-web-api-swagger/src",
       "stopAtEntry": false,
       "logging": {
         "moduleLoad": false
@@ -63,13 +63,13 @@
       }
     },
     {
-      "name": "Example 5 Debug",
+      "name": "005-web-api-angular Debug",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build-example-5",
-      "program": "${workspaceFolder}/example-5/build/example-5/bin/Debug/net6.0/example-5.dll",
+      "preLaunchTask": "build-005-web-api-angular",
+      "program": "${workspaceFolder}/005-web-api-angular/build/005-web-api-angular/bin/Debug/net6.0/005-web-api-angular.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/example-5/src",
+      "cwd": "${workspaceFolder}/005-web-api-angular/src",
       "stopAtEntry": false,
       "logging": {
         "moduleLoad": false
@@ -87,13 +87,13 @@
       }
     },
     {
-      "name": "Example 6 Debug",
+      "name": "006-web-api-i18n Debug",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build-example-6",
-      "program": "${workspaceFolder}/example-6/build/example-6/bin/Debug/net6.0/example-6.dll",
+      "preLaunchTask": "build-006-web-api-i18n",
+      "program": "${workspaceFolder}/006-web-api-i18n/build/006-web-api-i18n/bin/Debug/net6.0/006-web-api-i18n.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/example-6/src",
+      "cwd": "${workspaceFolder}/006-web-api-i18n/src",
       "stopAtEntry": false,
       "logging": {
         "moduleLoad": false
@@ -111,13 +111,13 @@
       }
     },
     {
-      "name": "Example 7 Debug",
+      "name": "007-web-api-versionized-swagger Debug",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build-example-7",
-      "program": "${workspaceFolder}/example-7/build/example-7/bin/Debug/net6.0/example-7.dll",
+      "preLaunchTask": "build-007-web-api-versionized-swagger",
+      "program": "${workspaceFolder}/007-web-api-versionized-swagger/build/007-web-api-versionized-swagger/bin/Debug/net6.0/007-web-api-versionized-swagger.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/example-7/src",
+      "cwd": "${workspaceFolder}/007-web-api-versionized-swagger/src",
       "stopAtEntry": false,
       "logging": {
         "moduleLoad": false

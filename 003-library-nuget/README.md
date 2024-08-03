@@ -1,4 +1,4 @@
-# Example 3 - Library as NuGet package
+# 003-library-nuget - Library as NuGet package
 
 # Table of Contents
 
@@ -18,7 +18,7 @@
 
 Create a new console application project:
 ~~~
-dotnet new classlib --framework net6.0 --name example-3 --output ./src
+dotnet new classlib --framework net6.0 --name 003-library-nuget --output ./src
 ~~~
 
 Change the value of `<OutputType>` to `Library` inside `*.csproj` or omit the property to produce a library:
@@ -136,7 +136,7 @@ Add the `ProjectReference` to the `*.csproj` file of the project which depends o
 
 ~~~xml
   <ItemGroup>
-    <ProjectReference Include="..\..\example-3\src\example-3.csproj" />
+    <ProjectReference Include="..\..\003-library-nuget\src\003-library-nuget.csproj" />
   </ItemGroup>
 ~~~
 
@@ -254,7 +254,7 @@ docker run -itd --name nuget-server -p 5555:80 loicsharma/baget
 
 Add package
 ~~~
-dotnet nuget push -s http://localhost:5555/v3/index.json build/example-3/GGolbik.CSharp.Example_3.1.0.0.nupkg
+dotnet nuget push -s http://localhost:5555/v3/index.json build/003-library-nuget/GGolbik.CSharp.Example_3.1.0.0.nupkg
 ~~~
 
 Add source
