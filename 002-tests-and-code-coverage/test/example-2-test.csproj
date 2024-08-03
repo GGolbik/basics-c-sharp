@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\example-2.csproj" />
+    <ProjectReference Include="..\src\002-tests-and-code-coverage.csproj" />
   </ItemGroup>
 
 </Project>

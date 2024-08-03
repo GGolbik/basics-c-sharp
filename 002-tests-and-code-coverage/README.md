@@ -1,4 +1,4 @@
-# Example 2 - Console application with unit tests and code coverage
+# 002-tests-and-code-coverage - Console application with unit tests and code coverage
 
 # Table of Contents
 
@@ -15,7 +15,7 @@
 
 Create a new console application project:
 ~~~
-dotnet new console --framework net6.0 --name example-2 --output ./src
+dotnet new console --framework net6.0 --name 002-tests-and-code-coverage --output ./src
 ~~~
 
 Update `*.csproj` to
@@ -108,7 +108,7 @@ The packages xunit.runner.visualstudio and Microsoft.NET.Test.Sdk are required f
 
 The coverlet.collector package allows collecting code coverage. If you don't intend to collect code coverage, you should remove this package reference.
 ~~~
-dotnet new xunit --framework net6.0 --name example-2-test --output ./test
+dotnet new xunit --framework net6.0 --name 002-tests-and-code-coverage-test --output ./test
 ~~~
 
 Add ReportGenerator and coverlet.msbuild for coverage.

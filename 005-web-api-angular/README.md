@@ -1,4 +1,4 @@
-# Example 5 - ASP .Net Angular
+# 005-web-api-angular - ASP .Net Angular
 
 # Table of Contents
 
@@ -31,7 +31,7 @@
 
 Create a new ASP.NET project with Angular.
 ~~~
-dotnet new angular --no-https --framework net6.0 --name example-5 --output ./src
+dotnet new angular --no-https --framework net6.0 --name 005-web-api-angular --output ./src
 ~~~
 
 Add entry to `.gitignore` file
@@ -95,7 +95,7 @@ It is set inside the `SpaRoot` (Single page application) property in the`*.cspro
 
 Angular running port is set inside the `SpaProxyServerUrl` property. If you want to change the Angular running port number, you can change inside this property. At the same time, you must change the `package.json` file of Angular application also.  
 
-`example-5.csproj`:
+`005-web-api-angular.csproj`:
 ~~~XML
 <PropertyGroup>
     <SpaRoot>ClientApp\</SpaRoot>
@@ -139,7 +139,7 @@ Angular running port is set inside the `SpaProxyServerUrl` property. If you want
   - `favicon.ico` - Replaces the favicon of the angular project.
 - `appsettings.Development.json`
 - `appsettings.json`
-- `example-5.csproj` - C# project file.
+- `005-web-api-angular.csproj` - C# project file.
 - `Program.cs` - Main C# application.
 - `WeatherForecast.cs` - Model for API function
 
@@ -153,10 +153,10 @@ The project structure is like a normal Angular project, but it has two modules (
   "name": "Example 5 Debug",
   "type": "coreclr",
   "request": "launch",
-  "preLaunchTask": "build-example-5",
-  "program": "${workspaceFolder}/example-5/build/bin/example-5/Debug/net6.0/example-5.dll",
+  "preLaunchTask": "build-005-web-api-angular",
+  "program": "${workspaceFolder}/005-web-api-angular/build/bin/005-web-api-angular/Debug/net6.0/005-web-api-angular.dll",
   "args": [],
-  "cwd": "${workspaceFolder}/example-5/src",
+  "cwd": "${workspaceFolder}/005-web-api-angular/src",
   "stopAtEntry": false,
   "logging": {
     "moduleLoad": false
@@ -177,12 +177,12 @@ The project structure is like a normal Angular project, but it has two modules (
 `task.json`
 ~~~json
 {
-  "label": "build-example-5",
+  "label": "build-005-web-api-angular",
   "command": "dotnet",
   "type": "process",
   "args": [
     "build",
-    "${workspaceFolder}/example-5/src/example-5.csproj",
+    "${workspaceFolder}/005-web-api-angular/src/005-web-api-angular.csproj",
     "/property:GenerateFullPaths=true",
     "/consoleloggerparameters:NoSummary"
   ],

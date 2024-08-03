@@ -1,4 +1,4 @@
-# Example 4 - ASP .Net Web-API
+# 004-web-api-swagger - ASP .Net Web-API
 
 # Table of Contents
 
@@ -14,7 +14,7 @@ Create a new console application project. This example provides the [http](#http
 ## http
 
 ~~~
-dotnet new webapi --no-https --framework net6.0 --name example-4 --output ./src
+dotnet new webapi --no-https --framework net6.0 --name 004-web-api-swagger --output ./src
 ~~~
 
 Change in `src/Properties/launchSettings.json` the applicationUrl in `example_4` to http://0.0.0.0:5080
@@ -59,7 +59,7 @@ dotnet run --urls "http://$(hostname -I | awk '{print $1}'):5080"
 ## https
 
 ~~~
-dotnet new webapi --framework net6.0 --name example-4 --output ./src
+dotnet new webapi --framework net6.0 --name 004-web-api-swagger --output ./src
 ~~~
 
 Change in `src/Properties/launchSettings.json` the applicationUrl in `example 4` to https://0.0.0.0:5443;http://0.0.0.0:5080
@@ -114,10 +114,10 @@ This file will contain the ASP.NET Core configuration for VSCode.
       "name": "Example 4 Debug",
       "type": "coreclr",
       "request": "launch",
-      "preLaunchTask": "build-example-4",
-      "program": "${workspaceFolder}/example-4/build/bin/example-4/Debug/net6.0/example-4.dll",
+      "preLaunchTask": "build-004-web-api-swagger",
+      "program": "${workspaceFolder}/004-web-api-swagger/build/bin/004-web-api-swagger/Debug/net6.0/004-web-api-swagger.dll",
       "args": [],
-      "cwd": "${workspaceFolder}/example-4/src",
+      "cwd": "${workspaceFolder}/004-web-api-swagger/src",
       "stopAtEntry": false,
       "logging": {
         "moduleLoad": false
@@ -145,12 +145,12 @@ This file will contain the ASP.NET Core build configuration for VSCode.
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build-example-4",
+      "label": "build-004-web-api-swagger",
       "command": "dotnet",
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/example-4/src/example-4.csproj",
+        "${workspaceFolder}/004-web-api-swagger/src/004-web-api-swagger.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],

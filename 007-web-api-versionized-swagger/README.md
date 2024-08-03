@@ -1,4 +1,4 @@
-# Example 7 - ASP .Net Web-API - Versioning - OpenAPI Swagger
+# 007-web-api-versionized-swagger - ASP .Net Web-API - Versioning - OpenAPI Swagger
 
 # Table of Contents
 
@@ -19,7 +19,7 @@
 
 Create a new console application project:
 ~~~
-dotnet new webapi --no-https --framework net6.0 --name example-7 --output ./src
+dotnet new webapi --no-https --framework net6.0 --name 007-web-api-versionized-swagger --output ./src
 ~~~
 
 # API Versioning

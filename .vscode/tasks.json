@@ -2,72 +2,72 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "build-example-1",
+      "label": "build-001-console-app",
       "command": "dotnet",
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/example-1/src/example-1.csproj",
+        "${workspaceFolder}/001-console-app/src/001-console-app.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
       "problemMatcher": "$msCompile"
     },
     {
-      "label": "build-example-2",
+      "label": "build-002-tests-and-code-coverage",
       "command": "dotnet",
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/example-2/src/example-2.csproj",
+        "${workspaceFolder}/002-tests-and-code-coverage/src/002-tests-and-code-coverage.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
       "problemMatcher": "$msCompile"
     },
     {
-      "label": "build-example-4",
+      "label": "build-004-web-api-swagger",
       "command": "dotnet",
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/example-4/src/example-4.csproj",
+        "${workspaceFolder}/004-web-api-swagger/src/004-web-api-swagger.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
       "problemMatcher": "$msCompile"
     },
     {
-      "label": "build-example-5",
+      "label": "build-005-web-api-angular",
       "command": "dotnet",
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/example-5/src/example-5.csproj",
+        "${workspaceFolder}/005-web-api-angular/src/005-web-api-angular.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
       "problemMatcher": "$msCompile"
     },
     {
-      "label": "build-example-6",
+      "label": "build-006-web-api-i18n",
       "command": "dotnet",
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/example-6/src/example-6.csproj",
+        "${workspaceFolder}/006-web-api-i18n/src/006-web-api-i18n.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],
       "problemMatcher": "$msCompile"
     },
     {
-      "label": "build-example-7",
+      "label": "build-007-web-api-versionized-swagger",
       "command": "dotnet",
       "type": "process",
       "args": [
         "build",
-        "${workspaceFolder}/example-7/src/example-7.csproj",
+        "${workspaceFolder}/007-web-api-versionized-swagger/src/007-web-api-versionized-swagger.csproj",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],

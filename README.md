@@ -1,20 +1,20 @@
 # Basics C Sharp
 
-- [Example 1](example-1)
+- [001-console-app](001-console-app)
   - A .Net 6 console application.
-- [Example 2](example-2)
+- [002-tests-and-code-coverage](002-tests-and-code-coverage)
   - A .Net 6 console application with unit tests and code coverage.
-- [Example 3](example-3)
+- [003-library-nuget](003-library-nuget)
   - A .NET 6 library as NuGet package.
-- [Example 4](example-4)
+- [004-web-api-swagger](004-web-api-swagger)
   - An ASP.NET 6 Web-API with Swagger documentation.
-- [Example 5](example-5)
+- [005-web-api-angular](005-web-api-angular)
   - An ASP.NET 6 Web-API with Angular UI.
-- [Example 6](example-6)
+- [006-web-api-i18n](006-web-api-i18n)
   - An ASP.NET 6 Web-API with localization.
-- [Example 7](example-7)
+- [007-web-api-versionized-swagger](007-web-api-versionized-swagger)
   - An ASP.NET 6 Web-API with versionized API and extended Swagger documentation. It provides an example of an exception during a request.
-- [Example 8](example-8)
+- [008-etc-passwd](008-etc-passwd)
   - Example to read `/etc/passwd` file
 - [Snippets](snippets)
   - [Download a file](snippets/download)
@@ -42,7 +42,7 @@ LABEL \
   org.opencontainers.image.description="A simple .Net Core console application."
 
 COPY build/Release/. /app/
-CMD ["dotnet", "/app/example-1.dll"]
+CMD ["dotnet", "/app/001-console-app.dll"]
 ~~~
 
 # Useful Packages
